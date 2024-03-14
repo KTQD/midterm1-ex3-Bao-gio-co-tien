@@ -13,12 +13,10 @@ public class Main {
             reader.close();
 
             String replacedContent = content.toString().replaceAll("Nha Trang", "Vũng Tàu");
-
             BufferedWriter writer = new BufferedWriter(new FileWriter("output.txt"));
             writer.write(replacedContent);
             writer.close();
 
-            System.out.println("Đã thay thế và ghi nội dung vào tệp " + writer);
         } catch (IOException e) {
             throw new RuntimeException();
         }
